@@ -287,6 +287,12 @@ ul.navbar-nav li a{
 		padding-top: 2rem;
 	}
 }
+
+@media only screen and(max-width: 992px){	
+	section#time div.container div.row > div.time-integrante{
+		margin-top: 4rem;
+	}
+}
 /********* NEWSLETTER *********/
 #newsletter{
 	background: $azul_escuro;

@@ -225,6 +225,9 @@ ul.navbar-nav li a {
     height: 6rem;
     padding: 0;
     padding-top: 2rem; } }
+@media only screen and (max-width: 992px) {
+  section#time div.container div.row > div.time-integrante {
+    margin-top: 4rem; } }
 /********* NEWSLETTER *********/
 #newsletter {
   background: #053d4e;
