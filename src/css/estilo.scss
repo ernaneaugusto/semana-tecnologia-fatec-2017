@@ -7,23 +7,24 @@ $azul: #2980b9;
 $azul_claro: #3498db;
 $azul_escuro: #053d4e;
 $cinza_escuro: #95a5a6;
-$verde: #b2d235;
+$verde: #a4d30f;
+$verde_escuro: #27ae60;
 $laranja: #d35400;
 $laranja_claro: #e67e22;
 
 @mixin border_radius(){
 	border-radius: 30px;
 }
-@mixin btn_azul_hover(){
-	background: $azul_escuro;
-	border-color: $azul;
-	color: $azul;
-}
 @mixin transition_suave(){
 	-webkit-transition: 0.2s ease-in all;
 	-moz-transition: 0.2s ease-in all;
 	-o-transition: 0.2s ease-in all;
 	transition: 0.2s ease-in all;
+}
+@mixin btn_azul_hover(){
+	background: $azul_escuro;
+	border-color: $azul;
+	color: $azul;
 }
 @mixin btn_azul_circulo(){
 	border: 2px solid $azul;
@@ -35,7 +36,29 @@ $laranja_claro: #e67e22;
 		@include transition_suave();
 	}
 }
-
+@mixin btn_verde_hover(){
+	background: transparent;
+	border-color: $verde;
+	color: $verde;
+}
+@mixin btn_verde_circulo(){
+	border: 2px solid $verde;
+	background: $verde;
+	color: $clouds;
+	font-size: 1rem;
+	@include border_radius();
+	padding: .75rem 2rem .75rem 2rem;
+	&:hover{
+		@include btn_verde_hover();
+		@include transition_suave();
+	}
+}
+@mixin bg_imagem($caminho){
+	background-image: url($caminho);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
 
 /********* GERAL *********/
 html{
@@ -59,8 +82,20 @@ section#newsletter{
 .bg-clouds{
 	background: $clouds;
 }
-.btn-circulo{
+.btn-circulo-azul{
 	@include btn_azul_circulo();
+}
+.btn-circulo-verde{
+	margin-top: 1.25rem;
+	@include btn_verde_circulo();
+}
+.btn-principal{
+	margin-top: 2rem;
+	&:hover{
+	background: $azul_escuro;
+	border-color: $azul_escuro;
+	color: $clouds;
+}
 }
 /********* HEADER/NAV *********/
 .img-logo{
@@ -92,11 +127,33 @@ ul.navbar-nav li a{
 	color: $clouds;
 }
 /********* CARROUSSEL *********/
-section#carousel{
+/*section#carousel{
 	.carousel-inner div img{
 		height: 100vh;
 		width: 100%;
 	}
+}*/
+.carousel-conteudo{
+	padding-top: 12rem;
+	color: $clouds;
+}
+.carousel-inner .item{
+	height: 100vh;
+	&:first-child{
+		@include bg_imagem('../img/banner1.jpg');
+	}
+	&:last-child{
+		@include bg_imagem('../img/banner2.jpg');
+	}
+}
+.titulo-principal{
+	font-weight: bold;
+	font-size: 2.5rem;
+}
+.descricao-principal{
+	padding-top: 1rem;
+	font-size: 1.1rem;
+	line-height: 1.5;
 }
 /********* MAIN *********/
 #servicos{

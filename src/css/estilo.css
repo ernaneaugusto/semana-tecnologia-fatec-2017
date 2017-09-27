@@ -21,12 +21,12 @@ section#newsletter {
 .bg-clouds {
   background: #ecf0f1; }
 
-.btn-circulo {
+.btn-circulo-azul {
   border: 2px solid #2980b9;
   font-size: 1rem;
   border-radius: 30px;
   padding: .75rem 2rem .75rem 2rem; }
-  .btn-circulo:hover {
+  .btn-circulo-azul:hover {
     background: #053d4e;
     border-color: #2980b9;
     color: #2980b9;
@@ -34,6 +34,30 @@ section#newsletter {
     -moz-transition: 0.2s ease-in all;
     -o-transition: 0.2s ease-in all;
     transition: 0.2s ease-in all; }
+
+.btn-circulo-verde {
+  margin-top: 1.25rem;
+  border: 2px solid #a4d30f;
+  background: #a4d30f;
+  color: #ecf0f1;
+  font-size: 1rem;
+  border-radius: 30px;
+  padding: .75rem 2rem .75rem 2rem; }
+  .btn-circulo-verde:hover {
+    background: transparent;
+    border-color: #a4d30f;
+    color: #a4d30f;
+    -webkit-transition: 0.2s ease-in all;
+    -moz-transition: 0.2s ease-in all;
+    -o-transition: 0.2s ease-in all;
+    transition: 0.2s ease-in all; }
+
+.btn-principal {
+  margin-top: 2rem; }
+  .btn-principal:hover {
+    background: #053d4e;
+    border-color: #053d4e;
+    color: #ecf0f1; }
 
 /********* HEADER/NAV *********/
 .img-logo {
@@ -54,7 +78,7 @@ section#newsletter {
 
 .nav-menu li a:hover {
   background: #053d4e;
-  border-bottom: 2px solid #b2d235;
+  border-bottom: 2px solid #a4d30f;
   -webkit-transition: 0.2s ease-in all;
   -moz-transition: 0.2s ease-in all;
   -o-transition: 0.2s ease-in all;
@@ -68,9 +92,37 @@ ul.navbar-nav li a {
   color: #ecf0f1; }
 
 /********* CARROUSSEL *********/
-section#carousel .carousel-inner div img {
-  height: 100vh;
-  width: 100%; }
+/*section#carousel{
+	.carousel-inner div img{
+		height: 100vh;
+		width: 100%;
+	}
+}*/
+.carousel-conteudo {
+  padding-top: 12rem;
+  color: #ecf0f1; }
+
+.carousel-inner .item {
+  height: 100vh; }
+  .carousel-inner .item:first-child {
+    background-image: url("../img/banner1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  .carousel-inner .item:last-child {
+    background-image: url("../img/banner2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+
+.titulo-principal {
+  font-weight: bold;
+  font-size: 2.5rem; }
+
+.descricao-principal {
+  padding-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5; }
 
 /********* MAIN *********/
 #servicos {
