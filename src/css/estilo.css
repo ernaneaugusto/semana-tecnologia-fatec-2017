@@ -144,11 +144,11 @@ ul.navbar-nav li a {
   #servicos i {
     background: #3498db;
     font-size: 2rem;
-    color: #ecf0f1;
+    color: #fff;
     /*padding-left: 1.3rem;
     padding-top: 1rem;*/
-    padding-left: 32%;
-    padding-top: 30%;
+    /*padding-left: 32%;*/
+    /*padding-top: 30%;*/
     width: 4.5rem;
     height: 4.5rem;
     border-radius: 50%; }
@@ -229,9 +229,37 @@ ul.navbar-nav li a {
   section#time div.container div.row > div.time-integrante {
     margin-top: 4rem; } }
 /********* NEWSLETTER *********/
+@media screen and (max-width: 992px) {
+  .cliente-logo {
+    margin-bottom: 4rem; } }
+/********* NEWSLETTER *********/
 #newsletter {
   background: #053d4e;
   color: #ecf0f1; }
+  #newsletter .newsletter-secao h3 {
+    margin: 0;
+    text-transform: uppercase;
+    color: #3498db;
+    font-weight: bold;
+    font-size: 1rem; }
+  #newsletter .newsletter-secao ul.newsletter-mapa {
+    padding-left: 0;
+    margin-top: 1rem;
+    line-height: 2; }
+    #newsletter .newsletter-secao ul.newsletter-mapa li {
+      list-style: none;
+      color: #95a5a6; }
+      #newsletter .newsletter-secao ul.newsletter-mapa li :hover {
+        margin-left: 1rem;
+        color: #ecf0f1;
+        -webkit-transition: 0.2s ease-in all;
+        -moz-transition: 0.2s ease-in all;
+        -o-transition: 0.2s ease-in all;
+        transition: 0.2s ease-in all; }
+      #newsletter .newsletter-secao ul.newsletter-mapa li a {
+        color: #ecf0f1; }
+        #newsletter .newsletter-secao ul.newsletter-mapa li a i {
+          font-size: .7rem; }
 
 h1.titulo-newsletter {
   color: #ecf0f1; }
