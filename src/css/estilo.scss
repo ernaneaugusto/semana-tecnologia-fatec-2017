@@ -1,17 +1,44 @@
-/********* CORES *********/
-$branco: #fff;
-$preto: #000;
-$clouds: #ecf0f1;
-$midnight: #2c3e50;
+/********* FONTES *********/
+@font-face {
+	font-family: 'OpenSans-Light';
+	src: url("../fonts/OpenSans-Light.ttf"); 
+}
+@font-face {
+	font-family: 'OpenSans-Regular';
+	src: url("../fonts/OpenSans-Regular.ttf"); 
+}
+@font-face {
+	font-family: 'OpenSans-Bold';
+	src: url("../fonts/OpenSans-Bold.ttf"); 
+}
+
+/********* CORES SASS *********/
 $azul: #2980b9;
 $azul_claro: #3498db;
 $azul_escuro: #053d4e;
-$cinza_escuro: #95a5a6;
-$verde: #a4d30f;
-$verde_escuro: #27ae60;
+$branco: #fff;
+$cinza: #95a5a6;
+$cinza_escuro: #333;
+$clouds: #ecf0f1;
 $laranja: #d35400;
 $laranja_claro: #e67e22;
+$midnight: #2c3e50;
+$preto: #000;
+$verde: #a4d30f;
+$verde_escuro: #27ae60;
 
+@mixin family_light(){
+	font-family: "OpenSans-Light", sans-serif;
+}
+@mixin family_regular(){
+	font-family: "OpenSans-Regular", sans-serif;
+}
+@mixin family_bold(){
+	font-family: "OpenSans-Bold", sans-serif;
+}
+@mixin font_bold(){
+	font-weight: bold;
+}
 @mixin border_radius(){
 	border-radius: 30px;
 }
@@ -61,9 +88,14 @@ $laranja_claro: #e67e22;
 }
 
 /********* GERAL *********/
+*{
+	@include family_regular();
+}
 html{
 	font-size: 16px;
-	color: $midnight;
+}
+body{
+	color: $cinza_escuro;
 }
 h2{
 	margin: 0;
@@ -76,8 +108,11 @@ main#servicos,
 section#time,
 section#clientes,
 section#newsletter{
-	padding-top: 4rem;
-	padding-bottom: 4rem;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+.servicos-titulo{
+	@include font_bold();
 }
 .bg-clouds{
 	background: $clouds;
@@ -92,10 +127,10 @@ section#newsletter{
 .btn-principal{
 	margin-top: 2rem;
 	&:hover{
-	background: $azul_escuro;
-	border-color: $azul_escuro;
-	color: $clouds;
-}
+		background: $azul_escuro;
+		border-color: $azul_escuro;
+		color: $clouds;
+	}
 }
 /********* HEADER/NAV *********/
 .img-logo{
@@ -127,15 +162,9 @@ ul.navbar-nav li a{
 	color: $clouds;
 }
 /********* CARROUSSEL *********/
-/*section#carousel{
-	.carousel-inner div img{
-		height: 100vh;
-		width: 100%;
-	}
-}*/
 .carousel-conteudo{
 	padding-top: 12rem;
-	color: $clouds;
+	color: $branco;
 }
 .carousel-inner .item{
 	height: 100vh;
@@ -146,14 +175,16 @@ ul.navbar-nav li a{
 		@include bg_imagem('../img/banner2.jpg');
 	}
 }
-.titulo-principal{
-	font-weight: bold;
-	font-size: 2.5rem;
+.titulo-principal{		
+	font-size: 2.75rem;
+	@include font_bold();
+	text-transform: uppercase;
 }
 .descricao-principal{
+	@include family_light();
 	padding-top: 1rem;
 	font-size: 1.1rem;
-	line-height: 1.5;
+	line-height: 1.6;
 }
 /********* MAIN *********/
 #servicos{
@@ -173,12 +204,15 @@ ul.navbar-nav li a{
 	h4.servicos-descricao{
 		font-size: 1rem;
 		line-height: 1.5;
-		color: $cinza_escuro;
+		color: $cinza;
 	}
 }
 .titulo-secao{	
-	font-size: 2rem;
-	margin-bottom: 2rem;
+	@include family_regular();
+	text-transform: uppercase;
+	@include font_bold();
+	font-size: 1.75rem;
+	margin-bottom: 2.5rem;
 	margin-top: 0;
 }
 .titulo-secao::after{
@@ -192,7 +226,7 @@ ul.navbar-nav li a{
 }
 .descricao-secao{
 	font-size: 1.1rem;
-	color: $cinza_escuro;
+	color: $cinza;
 	line-height: 1.5;
 	margin: 0 auto;
 	margin-bottom: 4rem;
@@ -204,58 +238,67 @@ ul.navbar-nav li a{
 		border: 8px solid $branco;
 	}
 	h3.time-titulo{
+		@include font_bold();
 		margin-bottom: 0px;
 	}
 	h4.time-descricao{
+		@include family_light();
 		margin-top: 0;
 		font-size: 1rem;
 		line-height: 1.5;
-		color: $cinza_escuro;
-		font-weight: bold;
+		color: $cinza;
+		@include font_bold();
+		}a{
+			i.fa{
+				background: $azul_claro;
+				color: $clouds;
+				border-radius: 50%;
+				height: 40px;
+				width: 40px;
+				padding-top: .7rem;
+				font-size: 1.25rem;
+				&:hover{
+					background: $azul;
+				}
+			}
+		}
 	}
-	i.fa{
-		background: $azul_claro;
+	/********* NEWSLETTER *********/
+	#newsletter{
+		background: $azul_escuro;
+		color: $clouds;	
+	}
+	h1.titulo-newsletter{
 		color: $clouds;
-		border-radius: 50%;
-		height: 40px;
-		width: 40px;
-		padding-top: .7rem;
-		font-size: 1.25rem;
 	}
-}
-/********* NEWSLETTER *********/
-#newsletter{
-	background: $azul_escuro;
-	color: $clouds;	
-}
-h1.titulo-newsletter{
-	color: $clouds;
-}
-.newsletter-item{
-	h3{
-		margin-top: 0;
+	.newsletter-item{
+		h3{
+			margin-top: 0;
+		}
+		h4{
+			font-size: .95rem;
+
+		}
+		h5{
+			font-size: .75rem;
+			line-height: 1.5;
+		}
 	}
-	h4{
-		font-size: .95rem;
-		
+	.form-newsletter {
+		input.newsletter-input{
+			background: $branco;
+			color: $cinza;
+			height: 3rem;
+			width: 20rem;
+			@include border_radius();
+			border-color: $azul_claro;
+			border: 2px solid $branco;
+			padding-left: 2rem;
+			padding-right: 2rem;
+			font-style: italic;
+		}
+		input.newsletter-input:active{
+			box-shadow: none;
+			-moz-box-shadow: none;
+		}
 	}
-	h5{
-		font-size: .75rem;
-		line-height: 1.5;
-	}
-}
-.form-newsletter {
-	input.newsletter-input{
-		background: $branco;
-		color: $cinza_escuro;
-		height: 3rem;
-		min-width: 20rem;
-		@include border_radius();
-		border-color: $azul_claro;
-		border: 2px solid $branco;
-	}
-	input.newsletter-input:active{
-		box-shadow: none;
-		-moz-box-shadow: none;
-	}
-}

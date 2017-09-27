@@ -1,8 +1,23 @@
-/********* CORES *********/
+/********* FONTES *********/
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url("../fonts/OpenSans-Light.ttf"); }
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url("../fonts/OpenSans-Regular.ttf"); }
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url("../fonts/OpenSans-Bold.ttf"); }
+/********* CORES SASS *********/
 /********* GERAL *********/
+* {
+  font-family: "OpenSans-Regular", sans-serif; }
+
 html {
-  font-size: 16px;
-  color: #2c3e50; }
+  font-size: 16px; }
+
+body {
+  color: #333; }
 
 h2 {
   margin: 0;
@@ -15,8 +30,11 @@ main#servicos,
 section#time,
 section#clientes,
 section#newsletter {
-  padding-top: 4rem;
-  padding-bottom: 4rem; }
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
+
+.servicos-titulo {
+  font-weight: bold; }
 
 .bg-clouds {
   background: #ecf0f1; }
@@ -92,15 +110,9 @@ ul.navbar-nav li a {
   color: #ecf0f1; }
 
 /********* CARROUSSEL *********/
-/*section#carousel{
-	.carousel-inner div img{
-		height: 100vh;
-		width: 100%;
-	}
-}*/
 .carousel-conteudo {
   padding-top: 12rem;
-  color: #ecf0f1; }
+  color: #fff; }
 
 .carousel-inner .item {
   height: 100vh; }
@@ -116,13 +128,15 @@ ul.navbar-nav li a {
     background-size: cover; }
 
 .titulo-principal {
+  font-size: 2.75rem;
   font-weight: bold;
-  font-size: 2.5rem; }
+  text-transform: uppercase; }
 
 .descricao-principal {
+  font-family: "OpenSans-Light", sans-serif;
   padding-top: 1rem;
   font-size: 1.1rem;
-  line-height: 1.5; }
+  line-height: 1.6; }
 
 /********* MAIN *********/
 #servicos {
@@ -144,8 +158,11 @@ ul.navbar-nav li a {
     color: #95a5a6; }
 
 .titulo-secao {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-family: "OpenSans-Regular", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.75rem;
+  margin-bottom: 2.5rem;
   margin-top: 0; }
 
 .titulo-secao::after {
@@ -169,14 +186,16 @@ ul.navbar-nav li a {
 .time-integrante img {
   border: 8px solid #fff; }
 .time-integrante h3.time-titulo {
+  font-weight: bold;
   margin-bottom: 0px; }
 .time-integrante h4.time-descricao {
+  font-family: "OpenSans-Light", sans-serif;
   margin-top: 0;
   font-size: 1rem;
   line-height: 1.5;
   color: #95a5a6;
   font-weight: bold; }
-.time-integrante i.fa {
+.time-integrante a i.fa {
   background: #3498db;
   color: #ecf0f1;
   border-radius: 50%;
@@ -184,6 +203,8 @@ ul.navbar-nav li a {
   width: 40px;
   padding-top: .7rem;
   font-size: 1.25rem; }
+  .time-integrante a i.fa:hover {
+    background: #2980b9; }
 
 /********* NEWSLETTER *********/
 #newsletter {
@@ -205,10 +226,13 @@ h1.titulo-newsletter {
   background: #fff;
   color: #95a5a6;
   height: 3rem;
-  min-width: 20rem;
+  width: 20rem;
   border-radius: 30px;
   border-color: #3498db;
-  border: 2px solid #fff; }
+  border: 2px solid #fff;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-style: italic; }
 .form-newsletter input.newsletter-input:active {
   box-shadow: none;
   -moz-box-shadow: none; }
