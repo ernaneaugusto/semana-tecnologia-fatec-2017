@@ -211,6 +211,12 @@ ul.navbar-nav li a {
     padding-top: 1rem;
     padding-left: 1.2rem; } }
 @media only screen and (max-width: 767px) {
+  main div:first-child + div.center-xs {
+    margin-top: inherit; }
+
+  main div > div.center-xs {
+    margin-top: 4rem; }
+
   .center-xs {
     text-align: center; }
 
