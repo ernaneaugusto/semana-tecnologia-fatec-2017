@@ -206,6 +206,19 @@ ul.navbar-nav li a {
   .time-integrante a i.fa:hover {
     background: #2980b9; }
 
+@media only screen and (min-width: 992px) and (max-width: 1999px) {
+  #servicos i {
+    padding-top: 1rem;
+    padding-left: 1.2rem; } }
+@media only screen and (max-width: 767px) {
+  .center-xs {
+    text-align: center; }
+
+  #servicos i {
+    width: 6rem;
+    height: 6rem;
+    padding: 0;
+    padding-top: 2rem; } }
 /********* NEWSLETTER *********/
 #newsletter {
   background: #053d4e;

@@ -248,57 +248,75 @@ ul.navbar-nav li a{
 		line-height: 1.5;
 		color: $cinza;
 		@include font_bold();
-		}a{
-			i.fa{
-				background: $azul_claro;
-				color: $clouds;
-				border-radius: 50%;
-				height: 40px;
-				width: 40px;
-				padding-top: .7rem;
-				font-size: 1.25rem;
-				&:hover{
-					background: $azul;
-				}
+	}
+	a{
+		i.fa{
+			background: $azul_claro;
+			color: $clouds;
+			border-radius: 50%;
+			height: 40px;
+			width: 40px;
+			padding-top: .7rem;
+			font-size: 1.25rem;
+			&:hover{
+				background: $azul;
 			}
 		}
 	}
-	/********* NEWSLETTER *********/
-	#newsletter{
-		background: $azul_escuro;
-		color: $clouds;	
+}
+@media only screen and(min-width: 992px) and(max-width: 1999px){
+	#servicos i{
+		padding-top: 1rem;
+		padding-left: 1.2rem;
 	}
-	h1.titulo-newsletter{
-		color: $clouds;
+}
+@media only screen and(max-width: 767px){	
+	.center-xs{
+		text-align: center;
 	}
-	.newsletter-item{
-		h3{
-			margin-top: 0;
-		}
-		h4{
-			font-size: .95rem;
+	#servicos i{
+		width: 6rem;
+		height: 6rem;
+		padding: 0;
+		padding-top: 2rem;
+	}
+}
+/********* NEWSLETTER *********/
+#newsletter{
+	background: $azul_escuro;
+	color: $clouds;	
+}
+h1.titulo-newsletter{
+	color: $clouds;
+}
+.newsletter-item{
+	h3{
+		margin-top: 0;
+	}
+	h4{
+		font-size: .95rem;
 
-		}
-		h5{
-			font-size: .75rem;
-			line-height: 1.5;
-		}
 	}
-	.form-newsletter {
-		input.newsletter-input{
-			background: $branco;
-			color: $cinza;
-			height: 3rem;
-			width: 20rem;
-			@include border_radius();
-			border-color: $azul_claro;
-			border: 2px solid $branco;
-			padding-left: 2rem;
-			padding-right: 2rem;
-			font-style: italic;
-		}
-		input.newsletter-input:active{
-			box-shadow: none;
-			-moz-box-shadow: none;
-		}
+	h5{
+		font-size: .75rem;
+		line-height: 1.5;
 	}
+}
+.form-newsletter {
+	input.newsletter-input{
+		background: $branco;
+		color: $cinza;
+		height: 3rem;
+		width: 20rem;
+		@include border_radius();
+		border-color: $azul_claro;
+		border: 2px solid $branco;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		font-style: italic;
+	}
+	input.newsletter-input:active{
+		box-shadow: none;
+		-moz-box-shadow: none;
+	}
+}
