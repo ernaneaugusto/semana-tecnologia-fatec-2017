@@ -399,3 +399,12 @@ footer{
 .dev{
 	font-style: italic;	
 }
+@media only screen and (max-width: 768px){
+	.text-xs-center{
+		text-align: center;
+	}
+	.redes-sociais{
+		margin-top: 2rem;
+		text-align: center;
+	}
+}
