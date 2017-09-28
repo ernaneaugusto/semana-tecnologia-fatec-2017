@@ -59,6 +59,7 @@ section#newsletter {
   background: #a4d30f;
   color: #ecf0f1;
   font-size: 1rem;
+  display: inline-block;
   border-radius: 30px;
   padding: .75rem 2rem .75rem 2rem; }
   .btn-circulo-verde:hover {
@@ -147,8 +148,8 @@ ul.navbar-nav li a {
     color: #fff;
     /*padding-left: 1.3rem;
     padding-top: 1rem;*/
-    /*padding-left: 32%;*/
-    /*padding-top: 30%;*/
+    padding-left: 32%;
+    padding-top: 30%;
     width: 4.5rem;
     height: 4.5rem;
     border-radius: 50%; }
@@ -204,7 +205,11 @@ ul.navbar-nav li a {
   padding-top: .7rem;
   font-size: 1.25rem; }
   .time-integrante a i.fa:hover {
-    background: #2980b9; }
+    background: #2980b9;
+    -webkit-transition: 0.2s ease-in all;
+    -moz-transition: 0.2s ease-in all;
+    -o-transition: 0.2s ease-in all;
+    transition: 0.2s ease-in all; }
 
 @media only screen and (min-width: 992px) and (max-width: 1999px) {
   #servicos i {
@@ -286,5 +291,32 @@ h1.titulo-newsletter {
 .form-newsletter input.newsletter-input:active {
   box-shadow: none;
   -moz-box-shadow: none; }
+
+/********* FOOTER *********/
+footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: .75rem;
+  background: #ecf0f1;
+  color: #333;
+  font-weight: bold; }
+
+.redes-sociais > a > i.fa {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding-top: .7rem;
+  font-size: 1.25rem;
+  background: #3498db;
+  color: #ecf0f1; }
+  .redes-sociais > a > i.fa:hover {
+    background: #2980b9;
+    -webkit-transition: 0.2s ease-in all;
+    -moz-transition: 0.2s ease-in all;
+    -o-transition: 0.2s ease-in all;
+    transition: 0.2s ease-in all; }
+
+.dev {
+  font-style: italic; }
 
 /*# sourceMappingURL=estilo.css.map */

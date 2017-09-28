@@ -79,6 +79,7 @@ $verde_escuro: #27ae60;
 	background: $verde;
 	color: $clouds;
 	font-size: 1rem;
+	display: inline-block;
 	@include border_radius();
 	padding: .75rem 2rem .75rem 2rem;
 	&:hover{
@@ -91,6 +92,17 @@ $verde_escuro: #27ae60;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+@mixin icone_social(){	
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	padding-top: .7rem;
+	font-size: 1.25rem;
+	&:hover{
+		background: $azul;
+		@include transition_suave();
+	}
 }
 
 /********* GERAL *********/
@@ -201,8 +213,8 @@ ul.navbar-nav li a{
 		color: $branco;
 		/*padding-left: 1.3rem;
 		padding-top: 1rem;*/
-		/*padding-left: 32%;*/
-		/*padding-top: 30%;*/
+		padding-left: 32%;
+		padding-top: 30%;
 		width: 4.5rem;
 		height: 4.5rem;
 		border-radius: 50%;
@@ -259,14 +271,7 @@ ul.navbar-nav li a{
 		i.fa{
 			background: $azul_claro;
 			color: $clouds;
-			border-radius: 50%;
-			height: 40px;
-			width: 40px;
-			padding-top: .7rem;
-			font-size: 1.25rem;
-			&:hover{
-				background: $azul;
-			}
+			@include icone_social();
 		}
 	}
 }
@@ -376,4 +381,21 @@ h1.titulo-newsletter{
 		box-shadow: none;
 		-moz-box-shadow: none;
 	}
+}
+/********* FOOTER *********/
+footer{
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	font-size: .75rem;
+	background: $clouds;
+	color: $cinza_escuro;
+	@include font_bold();
+}
+.redes-sociais > a > i.fa{
+	@include icone_social();
+	background: $azul_claro;
+	color: $clouds;
+}
+.dev{
+	font-style: italic;	
 }
