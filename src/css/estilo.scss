@@ -124,7 +124,7 @@ section#newsletter{
 }
 /********* HEADER/NAV *********/
 .navbar{
-	background: #053d4e;
+	background: rgba(5,61,78, .95);
 	border-radius: 0;
 	padding: 1rem;
 	margin-bottom: 0;
@@ -144,16 +144,13 @@ section#newsletter{
 }
 ul.nav-menu li a{	
 	margin-right: 2rem;
-	border-bottom: 2px solid $azul_escuro;
+	border-bottom: 2px solid transparent;
 
 	&:hover{
-		background: $azul_escuro;
+		background: transparent;
 		border-bottom: 2px solid $azul_claro;
 		@include transition_suave();	
 	}
-}
-ul.nav-menu li a:hover{
-	background: $azul_escuro;
 }
 ul.nav-menu li a{
 	font-size: 1rem;
@@ -178,6 +175,17 @@ ul.nav-menu li a{
 	transform: translateX(0);
 	opacity: 1;
 	@include transition_suave();		
+}
+@media only screen and (max-width: 768px){
+	.navbar{	
+		padding: 0;
+	}
+	ul.nav-menu li a{
+		margin-right: 0;
+	}
+	ul.nav-menu li button{
+		margin-top: 1rem;
+	}
 }
 /********* CARROUSSEL *********/
 .carousel-conteudo{
