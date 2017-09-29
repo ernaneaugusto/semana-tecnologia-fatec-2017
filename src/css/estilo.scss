@@ -1,5 +1,5 @@
 /********* FONTES *********/
- @font-face {
+@font-face {
 	font-family: 'Roboto-Thin';
 	src: url("../fonts/Roboto-Thin.ttf"); 
 }
@@ -10,7 +10,8 @@
 @font-face {
 	font-family: 'Roboto-Bold';
 	src: url("../fonts/Roboto-Bold.ttf"); 
-}@font-face {
+}
+@font-face {
 	font-family: 'Roboto-Medium';
 	src: url("../fonts/Roboto-Medium.ttf"); 
 }
@@ -54,21 +55,6 @@ $verde_escuro: #27ae60;
 	-o-transition: 0.1s ease-in all;
 	transition: 0.1s ease-in all;
 }
-@mixin btn_azul_hover(){
-	background: $azul_escuro;
-	border-color: $azul;
-	color: $azul;
-}
-@mixin btn_azul_circulo(){
-	border: 2px solid $azul;
-	font-size: 1rem;
-	@include border_radius();
-	padding: .75rem 2rem .75rem 2rem;
-	&:hover{
-		@include btn_azul_hover();
-		@include transition_suave();
-	}
-}
 @mixin bg_imagem($caminho){
 	background-image: url($caminho);
 	background-repeat: no-repeat;
@@ -84,6 +70,25 @@ $verde_escuro: #27ae60;
 	&:hover{
 		background: $azul;
 		@include transition_suave();
+	}
+}
+@mixin btn_circular(){
+	border: 2px solid $azul_claro;
+	border-radius: 30px;
+	padding: .75rem 1.75rem .75rem 1.75rem;
+}
+@mixin btn_circular_hover(){
+	@include transition_suave;
+	background: $azul;
+	border-color: $azul;
+}
+.btn-primary{
+	background: $azul_claro;
+}
+.btn-circular{
+	@include btn_circular();
+	&:hover{
+		@include btn_circular_hover();
 	}
 }
 
@@ -117,17 +122,6 @@ section#newsletter{
 .bg-clouds{
 	background: $clouds;
 }
-.btn-circulo-azul{
-	@include btn_azul_circulo();
-}
-.btn-principal{
-	margin-top: 2rem;
-	&:hover{
-		background: $azul_escuro;
-		border-color: $azul_escuro;
-		color: $clouds;
-	}
-}
 /********* HEADER/NAV *********/
 .navbar{
 	background: #053d4e;
@@ -145,11 +139,13 @@ section#newsletter{
 		background: $azul_escuro;
 	}
 }
-.navbar-nav > li > a{
-	padding: .75rem 1.2rem .75rem 1.2rem;
+.navbar-brand{
+	padding: .25rem;	
 }
 .nav-menu li a{	
-	margin: .2rem;
+	margin-right: 2rem;
+	border-bottom: 2px solid $azul_escuro;
+
 	&:hover{
 		background: $azul_escuro;
 		border-bottom: 2px solid $azul_claro;
@@ -162,6 +158,26 @@ ul.navbar-right li a:hover{
 ul.navbar-nav li a{
 	font-size: 1rem;
 	color: $clouds;
+}
+.anime span{
+	position: relative;
+	left: .4rem;
+}
+.anime:hover span{
+	left: 0;
+	@include transition_suave();		
+}
+.anime i{
+	-webkit-transform: translateX(-10px);
+	transform: translateX(-10px);
+	opacity: 0;
+}
+.anime:hover i{
+	display: inline-block;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	opacity: 1;
+	@include transition_suave();		
 }
 /********* CARROUSSEL *********/
 .carousel-conteudo{
@@ -185,6 +201,7 @@ ul.navbar-nav li a{
 .descricao-principal{
 	@include family_thin();
 	padding-top: 1rem;
+	margin-bottom: 3rem;
 	font-size: 1.25rem;
 	line-height: 1.6;
 }
@@ -352,7 +369,7 @@ h1.titulo-newsletter{
 		width: 18rem;
 		@include border_radius();
 		border-color: $azul_claro;
-		border: 2px solid $branco;
+		border: none;
 		padding-left: 2rem;
 		padding-right: 2rem;
 		font-style: italic;

@@ -12,6 +12,21 @@
   font-family: 'Roboto-Medium';
   src: url("../fonts/Roboto-Medium.ttf"); }
 /********* CORES SASS *********/
+.btn-primary {
+  background: #3498db; }
+
+.btn-circular {
+  border: 2px solid #3498db;
+  border-radius: 30px;
+  padding: .75rem 1.75rem .75rem 1.75rem; }
+  .btn-circular:hover {
+    -webkit-transition: 0.2s ease-in all;
+    -moz-transition: 0.2s ease-in all;
+    -o-transition: 0.2s ease-in all;
+    transition: 0.2s ease-in all;
+    background: #2980b9;
+    border-color: #2980b9; }
+
 /********* GERAL *********/
 * {
   font-family: "Roboto-Light", sans-serif; }
@@ -42,27 +57,6 @@ section#newsletter {
 .bg-clouds {
   background: #ecf0f1; }
 
-.btn-circulo-azul {
-  border: 2px solid #2980b9;
-  font-size: 1rem;
-  border-radius: 30px;
-  padding: .75rem 2rem .75rem 2rem; }
-  .btn-circulo-azul:hover {
-    background: #053d4e;
-    border-color: #2980b9;
-    color: #2980b9;
-    -webkit-transition: 0.2s ease-in all;
-    -moz-transition: 0.2s ease-in all;
-    -o-transition: 0.2s ease-in all;
-    transition: 0.2s ease-in all; }
-
-.btn-principal {
-  margin-top: 2rem; }
-  .btn-principal:hover {
-    background: #053d4e;
-    border-color: #053d4e;
-    color: #ecf0f1; }
-
 /********* HEADER/NAV *********/
 .navbar {
   background: #053d4e;
@@ -78,11 +72,12 @@ section#newsletter {
   #menu-mobile:hover {
     background: #053d4e; }
 
-.navbar-nav > li > a {
-  padding: .75rem 1.2rem .75rem 1.2rem; }
+.navbar-brand {
+  padding: .25rem; }
 
 .nav-menu li a {
-  margin: .2rem; }
+  margin-right: 2rem;
+  border-bottom: 2px solid #053d4e; }
   .nav-menu li a:hover {
     background: #053d4e;
     border-bottom: 2px solid #3498db;
@@ -97,6 +92,32 @@ ul.navbar-right li a:hover {
 ul.navbar-nav li a {
   font-size: 1rem;
   color: #ecf0f1; }
+
+.anime span {
+  position: relative;
+  left: .4rem; }
+
+.anime:hover span {
+  left: 0;
+  -webkit-transition: 0.2s ease-in all;
+  -moz-transition: 0.2s ease-in all;
+  -o-transition: 0.2s ease-in all;
+  transition: 0.2s ease-in all; }
+
+.anime i {
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+  opacity: 0; }
+
+.anime:hover i {
+  display: inline-block;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+  -webkit-transition: 0.2s ease-in all;
+  -moz-transition: 0.2s ease-in all;
+  -o-transition: 0.2s ease-in all;
+  transition: 0.2s ease-in all; }
 
 /********* CARROUSSEL *********/
 .carousel-conteudo {
@@ -124,6 +145,7 @@ ul.navbar-nav li a {
 .descricao-principal {
   font-family: "Roboto-Thin", sans-serif;
   padding-top: 1rem;
+  margin-bottom: 3rem;
   font-size: 1.25rem;
   line-height: 1.6; }
 
@@ -271,7 +293,7 @@ h1.titulo-newsletter {
   width: 18rem;
   border-radius: 30px;
   border-color: #3498db;
-  border: 2px solid #fff;
+  border: none;
   padding-left: 2rem;
   padding-right: 2rem;
   font-style: italic; }
