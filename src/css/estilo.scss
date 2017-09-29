@@ -142,7 +142,7 @@ section#newsletter{
 .navbar-brand{
 	padding: .25rem;	
 }
-.nav-menu li a{	
+ul.nav-menu li a{	
 	margin-right: 2rem;
 	border-bottom: 2px solid $azul_escuro;
 
@@ -152,10 +152,10 @@ section#newsletter{
 		@include transition_suave();	
 	}
 }
-ul.navbar-right li a:hover{
+ul.nav-menu li a:hover{
 	background: $azul_escuro;
 }
-ul.navbar-nav li a{
+ul.nav-menu li a{
 	font-size: 1rem;
 	color: $clouds;
 }
@@ -423,4 +423,21 @@ footer{
 		margin-top: 2rem;
 		text-align: center;
 	}
+}
+/********* BOTAO VOLTAR TOPO *********/
+a[href="#top"]{
+	color: $azul_claro;
+	padding: 1rem;
+	right: 1rem;
+	position: fixed;
+	top: 90%;
+	display: none;
+	font-size: 2rem;
+	text-decoration:none;
+}
+a[href="#top"]:hover{
+	color: $azul;
+	-webkit-transform: translateY(-1.5rem);
+	transform: translateY(-1.5rem);
+	@include transition_suave();
 }

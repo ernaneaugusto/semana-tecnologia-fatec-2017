@@ -75,10 +75,10 @@ section#newsletter {
 .navbar-brand {
   padding: .25rem; }
 
-.nav-menu li a {
+ul.nav-menu li a {
   margin-right: 2rem;
   border-bottom: 2px solid #053d4e; }
-  .nav-menu li a:hover {
+  ul.nav-menu li a:hover {
     background: #053d4e;
     border-bottom: 2px solid #3498db;
     -webkit-transition: 0.2s ease-in all;
@@ -86,10 +86,10 @@ section#newsletter {
     -o-transition: 0.2s ease-in all;
     transition: 0.2s ease-in all; }
 
-ul.navbar-right li a:hover {
+ul.nav-menu li a:hover {
   background: #053d4e; }
 
-ul.navbar-nav li a {
+ul.nav-menu li a {
   font-size: 1rem;
   color: #ecf0f1; }
 
@@ -350,5 +350,24 @@ footer {
   .redes-sociais {
     margin-top: 2rem;
     text-align: center; } }
+/********* BOTAO VOLTAR TOPO *********/
+a[href="#top"] {
+  color: #3498db;
+  padding: 1rem;
+  right: 1rem;
+  position: fixed;
+  top: 90%;
+  display: none;
+  font-size: 2rem;
+  text-decoration: none; }
+
+a[href="#top"]:hover {
+  color: #2980b9;
+  -webkit-transform: translateY(-1.5rem);
+  transform: translateY(-1.5rem);
+  -webkit-transition: 0.2s ease-in all;
+  -moz-transition: 0.2s ease-in all;
+  -o-transition: 0.2s ease-in all;
+  transition: 0.2s ease-in all; }
 
 /*# sourceMappingURL=estilo.css.map */
