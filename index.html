@@ -13,19 +13,33 @@
 <body>
 
 	<header>
-		<nav class="navbar navbar-site navbar-fixed-top">
+		<nav class="navbar navbar-site navbar-fixed-top" role="navigation">
 			<div class="container">
+
 				<div class="navbar-header">
-					<a class="navbar-brand" href="index.html"><img src="src/img/logo-peq.png" class="img-responsive img-logo"></a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#btn-menu-mobile" id="menu-mobile">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<a class="navbar-brand" href="index.html"><img src="src/img/logo-peq.png" class="img-responsive img-logo hidden-xs"></a>
 				</div>
-				<ul class="nav navbar-nav nav-menu">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Sobre</a></li>
-					<li><a href="#">Contato</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#" class="btn btn-primary btn-circulo-azul"><i class="fa fa-user"></i> Fazer login</a></li>
-				</ul>
+
+				<div class="collapse navbar-collapse" id="btn-menu-mobile">
+					<ul class="nav navbar-nav nav-menu center-xs">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Sobre</a></li>
+						<li><a href="#">Contato</a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#" class="btn btn-primary btn-circulo-azul"><i class="fa fa-user"></i> Fazer login</a></li>
+					</ul>
+
+				</div>		
+
 			</div>
 		</nav>
 	</header>
@@ -100,7 +114,7 @@
 					<h4 class="servicos-descricao">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum suscipit labore iste cupiditate vero id ipsum fuga.</h4>
 				</div>
 			</div>
-			
+
 			<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 center-xs">
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 servicos-item">
 					<i class="fa fa-line-chart"></i>
@@ -130,7 +144,7 @@
 					<h4 class="servicos-descricao">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum suscipit labore iste cupiditate vero id ipsum fuga.</h4>
 				</div>
 			</div>
-			
+
 			<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 center-xs">
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 servicos-item">
 					<i class="fa fa-tv"></i>
@@ -202,16 +216,16 @@
 			</div>
 
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 cliente-logo">
-				<img src="src/img/cliente1.jpg" class="img-circle" alt="">
+				<img src="src/img/logo-empresa.jpg" class="img-circle" alt="">
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 cliente-logo">
-				<img src="src/img/cliente2.jpg" class="img-circle" alt="">
+				<img src="src/img/logo-empresa.jpg" class="img-circle" alt="">
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 cliente-logo">
-				<img src="src/img/cliente3.jpg" class="img-circle" alt="">
+				<img src="src/img/logo-empresa.jpg" class="img-circle" alt="">
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 cliente-logo">
-				<img src="src/img/cliente4.jpg" class="img-circle" alt="">
+				<img src="src/img/logo-empresa.jpg" class="img-circle" alt="">
 			</div>
 
 		</div>
@@ -232,7 +246,7 @@
    				</div>
    			</div> -->
 
-   			<div class="newsletter-secao col-lg-3">
+   			<div class="newsletter-secao col-lg-3 col-md-3">
    				<h3>Mapa do site</h3>
    				<ul class="newsletter-mapa">
    					<li><a href="#"><i class="fa fa-chevron-right"></i> Home</a></li>
@@ -241,7 +255,7 @@
    				</ul>
    			</div>
 
-   			<div class="newsletter-secao col-lg-3">
+   			<div class="newsletter-secao col-lg-3 col-md-3">
    				<h3>Serviços</h3>
    				<ul class="newsletter-mapa">
    					<li><a href="#"><i class="fa fa-chevron-right"></i> Criação de sites</a></li>
@@ -253,7 +267,7 @@
    				</ul>
    			</div>
 
-   			<div class="col-lg-6">
+   			<div class="col-lg-6 col-md-6">
    				<h2 class="titulo-secao text-center titulo-newsletter">Receba nossas novidades</h2>
 
    				<form class="form-inline form-newsletter">
@@ -274,20 +288,17 @@
    	<div class="container">
    		<div class="row text-xs-center">
 
-   			<div class="col-md-6 col-sm-6 col-xs-12">
-   				<p>Projeto criado para aula de Introdução ao Bootstrap da Semana da Tecnolodia Fatec Cruzeiro 2017</p>
+   			<div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+   				<p>Projeto criado para aula de Introdução ao Bootstrap da Semana da Tecnologia Fatec Cruzeiro 2017</p>
    				<p>Desenvolvido por <a href="https://www.linkedin.com/in/ernane-toledo-802014118/" class="dev" target="_blank">Ernane Toledo</a></p>
    			</div>
 
-   			<div class="col-md-6 col-sm-6 col-xs-12 redes-sociais text-right">
+   			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 redes-sociais text-center">
    				<a href="https://www.facebook.com/toledo.ernane" target="_blank"><i class="fa fa-facebook"></i></a>
    				<a href="https://www.linkedin.com/in/ernane-toledo-802014118/" target="_blank"><i class="fa fa-linkedin"></i></a>
    				<a href="mailto:ernane.cipriano@gmail.com" target="_blank"><i class="fa fa-google"></i></a>
    			</div>
-   			
-   			
-
-
+   		
    		</div>
    	</div>
    </footer>
