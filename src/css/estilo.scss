@@ -1,15 +1,18 @@
 /********* FONTES *********/
-@font-face {
-	font-family: 'OpenSans-Light';
-	src: url("../fonts/OpenSans-Light.ttf"); 
+ @font-face {
+	font-family: 'Roboto-Thin';
+	src: url("../fonts/Roboto-Thin.ttf"); 
 }
 @font-face {
-	font-family: 'OpenSans-Regular';
-	src: url("../fonts/OpenSans-Regular.ttf"); 
+	font-family: 'Roboto-Light';
+	src: url("../fonts/Roboto-Light.ttf"); 
 }
 @font-face {
-	font-family: 'OpenSans-Bold';
-	src: url("../fonts/OpenSans-Bold.ttf"); 
+	font-family: 'Roboto-Bold';
+	src: url("../fonts/Roboto-Bold.ttf"); 
+}@font-face {
+	font-family: 'Roboto-Medium';
+	src: url("../fonts/Roboto-Medium.ttf"); 
 }
 
 /********* CORES SASS *********/
@@ -27,17 +30,14 @@ $preto: #000;
 $verde: #a4d30f;
 $verde_escuro: #27ae60;
 
-@mixin family_light(){
-	font-family: "OpenSans-Light", sans-serif;
+@mixin family_thin(){
+	font-family: "Roboto-Thin", sans-serif;
 }
-@mixin family_regular(){
-	font-family: "OpenSans-Regular", sans-serif;
+@mixin family_light(){
+	font-family: "Roboto-Light", sans-serif;
 }
 @mixin family_bold(){
-	font-family: "OpenSans-Bold", sans-serif;
-}
-@mixin font_bold(){
-	font-weight: bold;
+	font-family: "Roboto-Medium", sans-serif;
 }
 @mixin border_radius(){
 	border-radius: 30px;
@@ -69,24 +69,6 @@ $verde_escuro: #27ae60;
 		@include transition_suave();
 	}
 }
-@mixin btn_verde_hover(){
-	background: transparent;
-	border-color: $verde;
-	color: $verde;
-}
-@mixin btn_verde_circulo(){
-	border: 2px solid $verde;
-	background: $verde;
-	color: $clouds;
-	font-size: 1rem;
-	display: inline-block;
-	@include border_radius();
-	padding: .75rem 2rem .75rem 2rem;
-	&:hover{
-		@include btn_verde_hover();
-		@include transition_suave();
-	}
-}
 @mixin bg_imagem($caminho){
 	background-image: url($caminho);
 	background-repeat: no-repeat;
@@ -107,7 +89,7 @@ $verde_escuro: #27ae60;
 
 /********* GERAL *********/
 *{
-	@include family_regular();
+	@include family_light();
 }
 html{
 	font-size: 16px;
@@ -130,17 +112,13 @@ section#newsletter{
 	padding-bottom: 5rem;
 }
 .servicos-titulo{
-	@include font_bold();
+	@include family_bold();
 }
 .bg-clouds{
 	background: $clouds;
 }
 .btn-circulo-azul{
 	@include btn_azul_circulo();
-}
-.btn-circulo-verde{
-	margin-top: 1.25rem;
-	@include btn_verde_circulo();
 }
 .btn-principal{
 	margin-top: 2rem;
@@ -151,9 +129,6 @@ section#newsletter{
 	}
 }
 /********* HEADER/NAV *********/
-.img-logo{
-	max-width: 38%;
-}
 .navbar{
 	background: #053d4e;
 	border-radius: 0;
@@ -171,14 +146,13 @@ section#newsletter{
 	}
 }
 .navbar-nav > li > a{
-	padding: .75rem 2rem .75rem 2rem;
+	padding: .75rem 1.2rem .75rem 1.2rem;
 }
 .nav-menu li a{	
 	margin: .2rem;
-	border-bottom: 2px solid $azul_escuro;
 	&:hover{
 		background: $azul_escuro;
-		border-bottom: 2px solid $verde;
+		border-bottom: 2px solid $azul_claro;
 		@include transition_suave();	
 	}
 }
@@ -205,13 +179,13 @@ ul.navbar-nav li a{
 }
 .titulo-principal{		
 	font-size: 2.75rem;
-	@include font_bold();
+	@include family_bold();
 	text-transform: uppercase;
 }
 .descricao-principal{
-	@include family_light();
+	@include family_thin();
 	padding-top: 1rem;
-	font-size: 1.1rem;
+	font-size: 1.25rem;
 	line-height: 1.6;
 }
 /********* MAIN *********/
@@ -235,10 +209,9 @@ ul.navbar-nav li a{
 		color: $cinza;
 	}
 }
-.titulo-secao{	
-	@include family_regular();
+.titulo-secao{		
 	text-transform: uppercase;
-	@include font_bold();
+	@include family_bold();
 	font-size: 1.75rem;
 	margin-bottom: 2.5rem;
 	margin-top: 0;
@@ -266,16 +239,16 @@ ul.navbar-nav li a{
 		border: 8px solid $branco;
 	}
 	h3.time-titulo{
-		@include font_bold();
+		@include family_bold();
 		margin-bottom: 0px;
 	}
 	h4.time-descricao{
-		@include family_light();
+		@include family_thin();
 		margin-top: 0;
 		font-size: 1rem;
 		line-height: 1.5;
 		color: $cinza;
-		@include font_bold();
+		@include family_bold();
 	}
 	a{
 		i.fa{
@@ -329,7 +302,7 @@ ul.navbar-nav li a{
 			margin: 0;
 			text-transform: uppercase;		
 			color: $azul_claro;
-			@include font_bold();
+			@include family_bold();
 			font-size: 1rem;
 		}
 		ul.newsletter-mapa {
@@ -415,7 +388,7 @@ footer{
 	font-size: .75rem;
 	background: $clouds;
 	color: $cinza_escuro;
-	@include font_bold();
+	@include family_bold();
 }
 .redes-sociais > a > i.fa{
 	@include icone_social();
