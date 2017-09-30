@@ -24,12 +24,6 @@ $branco: #fff;
 $cinza: #95a5a6;
 $cinza_escuro: #333;
 $clouds: #ecf0f1;
-$laranja: #d35400;
-$laranja_claro: #e67e22;
-$midnight: #2c3e50;
-$preto: #000;
-$verde: #a4d30f;
-$verde_escuro: #27ae60;
 
 @mixin family_thin(){
 	font-family: "Roboto-Thin", sans-serif;
@@ -109,6 +103,10 @@ h2{
 h3{
 	font-size: 1.3rem;
 }
+.carousel-control{
+	height: 0;
+	margin-top: 20rem; 
+}
 main#servicos,
 section#time,
 section#clientes,
@@ -121,6 +119,11 @@ section#newsletter{
 }
 .bg-clouds{
 	background: $clouds;
+}
+.destaque{
+	@include family_bold;
+	font-style: italic;
+	color: $azul;
 }
 /********* HEADER/NAV *********/
 .navbar{
@@ -198,7 +201,7 @@ ul.nav-menu li a{
 		@include bg_imagem('../img/banner1.jpg');
 	}
 	&:last-child{
-		@include bg_imagem('../img/banner2.jpg');
+		@include bg_imagem('../img/banner3.jpg');
 	}
 }
 .titulo-principal{		

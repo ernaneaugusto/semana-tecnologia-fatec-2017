@@ -44,6 +44,10 @@ h2 {
 h3 {
   font-size: 1.3rem; }
 
+.carousel-control {
+  height: 0;
+  margin-top: 20rem; }
+
 main#servicos,
 section#time,
 section#clientes,
@@ -56,6 +60,11 @@ section#newsletter {
 
 .bg-clouds {
   background: #ecf0f1; }
+
+.destaque {
+  font-family: "Roboto-Medium", sans-serif;
+  font-style: italic;
+  color: #2980b9; }
 
 /********* HEADER/NAV *********/
 .navbar {
@@ -138,7 +147,7 @@ ul.nav-menu li a {
     background-position: center;
     background-size: cover; }
   .carousel-inner .item:last-child {
-    background-image: url("../img/banner2.jpg");
+    background-image: url("../img/banner3.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
