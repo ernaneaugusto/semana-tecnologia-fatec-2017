@@ -200,8 +200,11 @@ ul.nav-menu li a{
 	&:first-child{
 		@include bg_imagem('../img/banner1.jpg');
 	}
-	&:last-child{
+	&:nth-child(2){
 		@include bg_imagem('../img/banner3.jpg');
+	}
+	&:last-child{
+		@include bg_imagem('../img/banner4.jpg');
 	}
 }
 .titulo-principal{		
@@ -216,6 +219,28 @@ ul.nav-menu li a{
 	font-size: 1.25rem;
 	line-height: 1.6;
 }
+@media only screen and (max-width: 1000px){
+	.carousel-conteudo .titulo-principal{		
+		font-size: 2.1rem;				
+	}
+	.descricao-principal{
+		font-size: 1.1rem;
+		padding: 0;
+	}
+	a.btn-circular{
+		margin-top: -2rem;
+	}
+}
+@media only screen and (max-width: 500px){
+	.carousel-conteudo .titulo-principal{		
+		margin-top: -5rem;
+		line-height: 1;
+	}
+	.descricao-principal{
+		font-size: 1rem;
+	}
+}
+
 /********* MAIN *********/
 #servicos{
 	margin-bottom: 3rem;

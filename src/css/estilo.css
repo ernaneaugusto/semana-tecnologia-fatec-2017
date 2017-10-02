@@ -146,8 +146,13 @@ ul.nav-menu li a {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
-  .carousel-inner .item:last-child {
+  .carousel-inner .item:nth-child(2) {
     background-image: url("../img/banner3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  .carousel-inner .item:last-child {
+    background-image: url("../img/banner4.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
@@ -164,6 +169,23 @@ ul.nav-menu li a {
   font-size: 1.25rem;
   line-height: 1.6; }
 
+@media only screen and (max-width: 1000px) {
+  .carousel-conteudo .titulo-principal {
+    font-size: 2.1rem; }
+
+  .descricao-principal {
+    font-size: 1.1rem;
+    padding: 0; }
+
+  a.btn-circular {
+    margin-top: -2rem; } }
+@media only screen and (max-width: 500px) {
+  .carousel-conteudo .titulo-principal {
+    margin-top: -5rem;
+    line-height: 1; }
+
+  .descricao-principal {
+    font-size: 1rem; } }
 /********* MAIN *********/
 #servicos {
   margin-bottom: 3rem; }
