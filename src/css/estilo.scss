@@ -154,6 +154,9 @@ ul.nav-menu li a{
 		border-bottom: 2px solid $azul_claro;
 		@include transition_suave();	
 	}
+	&:visited{
+		background: red;
+	}
 }
 ul.nav-menu li a{
 	font-size: 1rem;
@@ -201,10 +204,10 @@ ul.nav-menu li a{
 		@include bg_imagem('../img/banner1.jpg');
 	}
 	&:nth-child(2){
-		@include bg_imagem('../img/banner3.jpg');
+		@include bg_imagem('../img/banner2.jpg');
 	}
 	&:last-child{
-		@include bg_imagem('../img/banner4.jpg');
+		@include bg_imagem('../img/banner3.jpg');
 	}
 }
 .titulo-principal{		
@@ -240,7 +243,6 @@ ul.nav-menu li a{
 		font-size: 1rem;
 	}
 }
-
 /********* MAIN *********/
 #servicos{
 	margin-bottom: 3rem;
@@ -248,10 +250,8 @@ ul.nav-menu li a{
 		background: $azul_claro;
 		font-size: 2rem;
 		color: $branco;
-		/*padding-left: 1.3rem;
-		padding-top: 1rem;*/
-		padding-left: 32%;
-		padding-top: 30%;
+		padding-left: 34%;
+		padding-top: 33%;
 		width: 4.5rem;
 		height: 4.5rem;
 		border-radius: 50%;

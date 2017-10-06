@@ -94,6 +94,8 @@ ul.nav-menu li a {
     -moz-transition: 0.2s ease-in all;
     -o-transition: 0.2s ease-in all;
     transition: 0.2s ease-in all; }
+  ul.nav-menu li a:visited {
+    background: red; }
 
 ul.nav-menu li a {
   font-size: 1rem;
@@ -147,12 +149,12 @@ ul.nav-menu li a {
     background-position: center;
     background-size: cover; }
   .carousel-inner .item:nth-child(2) {
-    background-image: url("../img/banner3.jpg");
+    background-image: url("../img/banner2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
   .carousel-inner .item:last-child {
-    background-image: url("../img/banner4.jpg");
+    background-image: url("../img/banner3.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
@@ -193,10 +195,8 @@ ul.nav-menu li a {
     background: #3498db;
     font-size: 2rem;
     color: #fff;
-    /*padding-left: 1.3rem;
-    padding-top: 1rem;*/
-    padding-left: 32%;
-    padding-top: 30%;
+    padding-left: 34%;
+    padding-top: 33%;
     width: 4.5rem;
     height: 4.5rem;
     border-radius: 50%; }
